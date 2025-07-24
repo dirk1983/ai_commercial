@@ -45,9 +45,10 @@
 
 *国外模型：*
 1. OpenAI官方：gpt-3.5-turbo-0125、gpt-3.5-turbo-instruct（擅长执行具体指令，无上下文）、gpt-4、gpt-o1等、dall-e-3（画图）、gpt-4-vision-preview（识图）、dall-e-2（改图）、gpt-image-1（画图、改图）；由于使用官方APIKEY成本和门槛都很高，大多数用户都是购买第三方接口的额度来调用gpt-4等模型，并且第三方接口可以支持某些官方没有的模型，如gpt-4-all，gpts上的应用gpt-4-gizmo-xxx等。
-2. Claude官方：claude-3-opus-20240229、claude-3-sonnet-20240229、claude-2.1、claude-2.0、claude-instant-1.2（Claude的所有模型均包含文本对话及识图能力）；
-3. 谷歌Bard：gemini-2.0-flash、gemini-2.5-pro、gemini-2.5-flash（识图）；
-4. Grok：借助第三方项目实现对官方Web端的接口调用
+2. 微软Azure OpenAI：微软为国内用户提供的合法调用OpenAI模型的服务，支持的模型同上。
+3. Claude官方：claude-3-opus-20240229、claude-3-sonnet-20240229、claude-2.1、claude-2.0、claude-instant-1.2（Claude的所有模型均包含文本对话及识图能力）；
+4. 谷歌Bard：gemini-2.0-flash、gemini-2.5-pro、gemini-2.5-flash（识图）；
+5. Grok：借助第三方项目实现对官方Web端的接口调用
 
 *国内模型：*
 1. DeepSeek：DeepSeek：deepseek-r1、deepseek-v3等；
