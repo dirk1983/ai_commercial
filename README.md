@@ -95,7 +95,7 @@
 
 **版本发布日志：**
 
-最新版本为v6.7.2508，版本发布日期请点击这里查看：https://bbs.ipfei.cn/forum.php?mod=forumdisplay&fid=133
+最新版本为v6.7.2508，版本发布日期请点击这里查看：https://bbs.ipfei.cn/forum.php?mod=forumdisplay&fid=37
 
 **有购买意愿的朋友也可以加微信好友咨询，请备注下购买商业版，谢谢**
 
