@@ -1,5 +1,5 @@
-# chatgpt_commercial
-**本项目是基于我的免费开源版本 https://github.com/dirk1983/chatgpt 开发的商业版，同样使用PHP开发，没用任何框架，方便二次开发。**
+# ai_commercial
+**本项目是基于我的免费开源版本 https://github.com/dirk1983/deepseek 开发的商业版，同样使用PHP开发，没用任何框架，方便二次开发。**
 
 **和我的免费开源项目相比有以下几项差异：**
 
@@ -32,7 +32,7 @@
 6. 进一步优化接口响应速度，实现秒级回复，详细错误提示，超时处理，并支持查询和继续历史对话。
 7. 支持切换模型，支持切换角色和场景，支持OpenAI画图、MidJourney画图、StableDiffusion画图等功能。模型、角色、场景在后台都可以自定义。
 8. 支持关键词过滤，支持百度内容审核，问题和答案都可以进行过滤和审核。
-9. 支持在后台修改API接口的反代地址及代理地址，网站可放在国内运营。支持自定义AI身份，隐藏openai和chatgpt有关信息。
+9. 支持在后台修改API接口的反代地址及代理地址，网站可放在国内运营。支持自定义AI身份。
 10. 支持用户自行开发自定义插件，升级不受影响。内部论坛已提供用户付费购买的插件，如分销插件、其他风格的UI、专业的画图、联网搜素插件等。
 11. 支持所有主流国内外大模型官方接口（具体可参考截图），为付费用户免费提供微信服务号登陆接口、小程序登陆接口、StableDiffusion画图接口、微软TTS文字转语音接口、海外免费OpenAI/Bard/SD画图接口。
 12. 支持将任意模型联网使用，用来自搜索引擎的数据作为上下文提问。
@@ -44,23 +44,30 @@
 **本项目目前已支持的模型列表：**
 
 *国外模型：*
-1. OpenAI官方：gpt-3.5-turbo-0125、gpt-3.5-turbo-instruct（擅长执行具体指令，无上下文）、gpt-4-turbo-preview（最具性价比）、gpt-4-0125-preview等、dall-e-3（画图）、gpt-4-vision-preview（识图）、dall-e-2（改图）；
-2. 由于使用官方APIKEY成本和门槛都很高，大多数用户都是购买第三方接口的额度来调用gpt-4等模型，并且第三方接口可以支持某些官方没有的模型，如gpt-4-all，gpts上的应用gpt-4-gizmo-xxx等；
-3. Claude官方：claude-3-opus-20240229、claude-3-sonnet-20240229、claude-2.1、claude-2.0、claude-instant-1.2（Claude的所有模型均包含文本对话及识图能力）；
-4. 谷歌Bard：gemini-pro、gemini-pro-vision（识图）；
+1. OpenAI官方：gpt-3.5-turbo-0125、gpt-3.5-turbo-instruct（擅长执行具体指令，无上下文）、gpt-4、gpt-o1等、dall-e-3（画图）、gpt-4-vision-preview（识图）、dall-e-2（改图）、gpt-image-1（画图、改图）；由于使用官方APIKEY成本和门槛都很高，大多数用户都是购买第三方接口的额度来调用gpt-4等模型，并且第三方接口可以支持某些官方没有的模型，如gpt-4-all，gpts上的应用gpt-4-gizmo-xxx等。
+2. Claude官方：claude-3-opus-20240229、claude-3-sonnet-20240229、claude-2.1、claude-2.0、claude-instant-1.2（Claude的所有模型均包含文本对话及识图能力）；
+3. 谷歌Bard：gemini-2.0-flash、gemini-2.5-pro、gemini-2.5-flash（识图）；
+4. Grok：借助第三方项目实现对官方Web端的接口调用
 
 *国内模型：*
-1. 文心千帆：ERNIE-Bot-turbo、ERNIE-Bot、ERNIE-Bot-4、BLOOMZ-7B、CodeLlama-7b-Instruct、Stable-Diffusion-XL（画图）；
-2. 通义千问：qwen-turbo、qwen-vl-plus（识图）；
-3. 清华智谱：glm-4、glm-3-turbo、glm-4v（识图）、cogview-3（画图）；
-4. 360智脑：360GPT_S2_V9；
-5. 讯飞星火：大模型1.5、2.0、3.0、3.5；
-6. 百川智能：Baichuan2-Turbo、Baichuan2-Turbo-192k；
-7. 腾讯混元：ChatStd、ChatPro；
-8. 阿里StableDiffusion：stable-diffusion-v1.5（画图）、stable-diffusion-x1（画图）；
+1. DeepSeek：DeepSeek：deepseek-r1、deepseek-v3等；
+2. 文心千帆：ERNIE-4.0-8K、ERNIE-3.5-8K、ERNIE-Speed-128K（免费）、ERNIE-Lite-8K（免费）等文本大模型，每个模型使用前需要先点击这里开通权限、fuyu_8b（识图）、Stable-Diffusion-XL（画图）；
+3. 通义千问：qwen-turbo、qwen-vl-plus（识图）、wanx-v1（画图）、stable-diffusion-xl（画图）、stable-diffusion-v1.5（画图）；
+4. 腾讯混元：hunyuan-pro、hunyuan-standard、hunyuan-lite、hunyuan-code（写代码）、hunyuan-role、hunyuan-vision（识图）、TextToImageLite（画图））；
+5. 清华智谱：glm-4-0520、glm-4 、glm-4-air、glm-4-airx、glm-4-long、 glm-4-flash、codegeex-4（写代码）、glm-4v（识图）、cogview-3（画图）；
+6. 讯飞星火：Spark Lite、Spark Pro、Spark Max、图片理解、图片生成，参数值随便写，靠API地址区分；
+7. 360智脑：360gpt2-pro、360gpt-turbo-responsibility-8k、360gpt-pro、360gpt-turbo、360CV_S0_V5（画图）；
+8. 百川智能：Baichuan4、Baichuan3-Turbo、Baichuan3-Turbo-128k、Baichuan2-Turbo、Baichuan2-Turbo-192k；
 9. 月之暗面：moonshot-v1-8k、moonshot-v1-32k、moonshot-v1-128k；
-10. LinkAI：这是一个第三方知识库网站，请将app_code写到模型参数后面；
-11. 本地知识库：模型参数值填写知识库ID即可，如：asst_eduOuMQnER4nFKyDdCJo7Wur
+10. 火山方舟（豆包）：Doubao-lite-4k、Doubao-lite-32k、Doubao-lite-128k、Doubao-pro-4k、Doubao-pro-32k、Doubao-pro-128k；
+11. MiniMax：abab6.5s、abab5.5s、abab5.5；
+12. 零一万物：yi-large、yi-large-turbo、yi-medium、yi-spark、yi-vision（识图）；
+13. 无问芯穹：mt-infini-3b、baichuan2-13b-chat、qwen2-72b-chat、glm-4-9b-chat、yi-34b-chat；
+14. 硅基流动：超多免费和收费的第三方模型，点击这里查看。模型参数值样例：deepseek-ai/DeepSeek-V2-Chat
+15. LinkAI：这是一个第三方知识库网站，请将app_code写到模型参数后面，如gpt-3.5-turbo,cJslRJSo；
+16. 本地知识库：模型参数值填写知识库ID即可，如：asst_eduOuMQnER4nFKyDdCJo7Wur
+
+各厂商模型更新换代很快，大多数情况下程序可以自动适配最新模型，个别不支持的我也会及时跟进更新。
 
 **部署要求：**
 1. 运行本项目必须要有自己的服务器，虚拟主机+Mysql数据库也可以，我不提供服务器或虚拟主机服务，请各位自行购买。
@@ -75,7 +82,7 @@
 2. 商业版包含全部源码，未作任何加密或混淆，支持远程自动更新。网站更新和登录需要授权并绑定域名，提供顶级域名即可，二级域名可随时更换。
 3. 每个购买者可加入内部论坛学习部署和安装教程，小白也能轻松搞定。
 4. 源码仅限购买者使用，请不要免费分享或转卖本项目源码，否则将永久被拉黑。君子协定，自觉遵守，唯有人品，可立一生。
-5. 测试网址：https://chatpro.ipfei.com
+5. 测试网址：https://chat.ipfei.com
 6. 购买链接：https://item.taobao.com/item.htm?id=713331539595
 7. 由于程序代码未做加密，一旦售出无法退货，请您购买前考虑清楚是否真的需要。
 8. 现阶段想单纯靠网站吸引用户已经很难，除非您之前已有粉丝或用户。
@@ -87,132 +94,132 @@
 
 **版本发布日志：**
 
-最新版本为v6.0.2410，版本发布日期请点击这里查看：https://bbs.ipfei.cn/forum.php?mod=forumdisplay&fid=37
+最新版本为v6.7.2508，版本发布日期请点击这里查看：https://bbs.ipfei.cn/forum.php?mod=forumdisplay&fid=133
 
 **有购买意愿的朋友也可以加微信好友咨询，请备注下购买商业版，谢谢**
 
-![image](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/67256e5b-32b9-42d8-8a50-21ee4865e2f3)
+![image](https://github.com/dirk1983/ai_commercial/assets/5563148/67256e5b-32b9-42d8-8a50-21ee4865e2f3)
 
 
 **前台界面截图如下：**
 
 **PC端：**
 
-![1](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/68376963-ff12-4065-bb9b-3e2ac1a42fda)
+![1](https://github.com/dirk1983/ai_commercial/assets/5563148/68376963-ff12-4065-bb9b-3e2ac1a42fda)
 
-![2](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/15a2b7bf-7d8e-4831-b480-1c1ea07232d0)
+![2](https://github.com/dirk1983/ai_commercial/assets/5563148/15a2b7bf-7d8e-4831-b480-1c1ea07232d0)
 
-![3](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/a3a31600-48a1-42a9-8b15-6c2b34cfc234)
+![3](https://github.com/dirk1983/ai_commercial/assets/5563148/a3a31600-48a1-42a9-8b15-6c2b34cfc234)
 
-![4](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/f14730f9-3690-4efc-8499-0bef6e4eacb1)
+![4](https://github.com/dirk1983/ai_commercial/assets/5563148/f14730f9-3690-4efc-8499-0bef6e4eacb1)
 
-![5](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/1abe4956-54a8-401d-a841-b44169b5b84d)
+![5](https://github.com/dirk1983/ai_commercial/assets/5563148/1abe4956-54a8-401d-a841-b44169b5b84d)
 
-![6](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/821a6043-06e8-4bab-8dd7-b3fa34572dd7)
+![6](https://github.com/dirk1983/ai_commercial/assets/5563148/821a6043-06e8-4bab-8dd7-b3fa34572dd7)
 
-![7](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/eb5ba757-93b3-4356-a87d-3a4d92946979)
+![7](https://github.com/dirk1983/ai_commercial/assets/5563148/eb5ba757-93b3-4356-a87d-3a4d92946979)
 
-![8](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/4773c0b8-7abe-4d6a-bd3c-b62b0437e0f5)
+![8](https://github.com/dirk1983/ai_commercial/assets/5563148/4773c0b8-7abe-4d6a-bd3c-b62b0437e0f5)
 
-![9](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/b8558674-53b3-489b-9254-3e245d0e7cd1)
+![9](https://github.com/dirk1983/ai_commercial/assets/5563148/b8558674-53b3-489b-9254-3e245d0e7cd1)
 
-![10](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/51217178-d218-4984-ba50-59925725a08b)
+![10](https://github.com/dirk1983/ai_commercial/assets/5563148/51217178-d218-4984-ba50-59925725a08b)
 
-![11](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/2c7502c3-8358-4409-a7ce-892e8ac24df4)
+![11](https://github.com/dirk1983/ai_commercial/assets/5563148/2c7502c3-8358-4409-a7ce-892e8ac24df4)
 
-![12](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/d2e9350f-88a8-409f-98ef-2bcd9041571e)
+![12](https://github.com/dirk1983/ai_commercial/assets/5563148/d2e9350f-88a8-409f-98ef-2bcd9041571e)
 
-![13](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/fd481db2-9dbf-46fa-8fe6-6f7b119ca5b1)
+![13](https://github.com/dirk1983/ai_commercial/assets/5563148/fd481db2-9dbf-46fa-8fe6-6f7b119ca5b1)
 
-![14](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/c18eee32-843a-4a2d-b2b5-982be78df885)
+![14](https://github.com/dirk1983/ai_commercial/assets/5563148/c18eee32-843a-4a2d-b2b5-982be78df885)
 
-![15](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/88a02ec1-9a71-43c3-a0a8-aafdd6b0e219)
+![15](https://github.com/dirk1983/ai_commercial/assets/5563148/88a02ec1-9a71-43c3-a0a8-aafdd6b0e219)
 
-![16](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/0d95149b-6632-4504-bae4-3ce613ecbc71)
+![16](https://github.com/dirk1983/ai_commercial/assets/5563148/0d95149b-6632-4504-bae4-3ce613ecbc71)
 
-![17](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/b591b57f-05f9-4933-a9db-70745fa284d8)
+![17](https://github.com/dirk1983/ai_commercial/assets/5563148/b591b57f-05f9-4933-a9db-70745fa284d8)
 
-![18](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/5fc2a998-b34e-4b94-b6d3-1a279eeb6896)
+![18](https://github.com/dirk1983/ai_commercial/assets/5563148/5fc2a998-b34e-4b94-b6d3-1a279eeb6896)
 
-![19](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/2a939538-82af-4061-880c-a1eaaa39a28a)
+![19](https://github.com/dirk1983/ai_commercial/assets/5563148/2a939538-82af-4061-880c-a1eaaa39a28a)
 
-![20](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/306f3369-bd83-40b7-afaf-24d394f81d45)
+![20](https://github.com/dirk1983/ai_commercial/assets/5563148/306f3369-bd83-40b7-afaf-24d394f81d45)
 
-![21](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/50d45269-db4e-41d8-8c1a-0470cf823694)
+![21](https://github.com/dirk1983/ai_commercial/assets/5563148/50d45269-db4e-41d8-8c1a-0470cf823694)
 
-![22](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/d3191172-d1f4-49b8-bb43-c653bad56958)
+![22](https://github.com/dirk1983/ai_commercial/assets/5563148/d3191172-d1f4-49b8-bb43-c653bad56958)
 
-![23](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/98ee3e13-bf09-4e1e-a1b9-b15c093d05c7)
+![23](https://github.com/dirk1983/ai_commercial/assets/5563148/98ee3e13-bf09-4e1e-a1b9-b15c093d05c7)
 
-![24](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/185b26e0-8765-4bcc-bc49-e240aa1c5601)
+![24](https://github.com/dirk1983/ai_commercial/assets/5563148/185b26e0-8765-4bcc-bc49-e240aa1c5601)
 
 
 **手机端：**
 
-![1](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/057a992e-8786-4c3b-aeae-30453bcc7821)
+![1](https://github.com/dirk1983/ai_commercial/assets/5563148/057a992e-8786-4c3b-aeae-30453bcc7821)
 
-![2](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/8ef22176-6fc9-41fb-9234-9393cacefb70)
+![2](https://github.com/dirk1983/ai_commercial/assets/5563148/8ef22176-6fc9-41fb-9234-9393cacefb70)
 
-![3](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/8e741569-3b59-4431-a8e7-87e69fe64919)
+![3](https://github.com/dirk1983/ai_commercial/assets/5563148/8e741569-3b59-4431-a8e7-87e69fe64919)
 
-![4](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/8ae0ff67-ac21-4f04-9f71-7d4bb9b2b5f9)
+![4](https://github.com/dirk1983/ai_commercial/assets/5563148/8ae0ff67-ac21-4f04-9f71-7d4bb9b2b5f9)
 
-![5](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/0594aa9b-537e-45ab-9b8f-871d887c95f4)
+![5](https://github.com/dirk1983/ai_commercial/assets/5563148/0594aa9b-537e-45ab-9b8f-871d887c95f4)
 
-![6](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/431ca7e7-79e0-4534-95a4-3e1aeb09c0e7)
+![6](https://github.com/dirk1983/ai_commercial/assets/5563148/431ca7e7-79e0-4534-95a4-3e1aeb09c0e7)
 
-![7](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/97cbfdf9-7a78-486d-b830-bbffff88caad)
+![7](https://github.com/dirk1983/ai_commercial/assets/5563148/97cbfdf9-7a78-486d-b830-bbffff88caad)
 
-![8](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/9c29caeb-fc1c-4490-9f2d-04712874c7b5)
+![8](https://github.com/dirk1983/ai_commercial/assets/5563148/9c29caeb-fc1c-4490-9f2d-04712874c7b5)
 
-![9](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/7329575f-5490-48a9-9f82-18e14a349efd)
+![9](https://github.com/dirk1983/ai_commercial/assets/5563148/7329575f-5490-48a9-9f82-18e14a349efd)
 
-![10](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/476e2b7c-da93-44f5-b88d-a80e0f03dff0)
+![10](https://github.com/dirk1983/ai_commercial/assets/5563148/476e2b7c-da93-44f5-b88d-a80e0f03dff0)
 
-![11](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/5d3d9a78-a809-4673-8bbc-fba0443122a9)
+![11](https://github.com/dirk1983/ai_commercial/assets/5563148/5d3d9a78-a809-4673-8bbc-fba0443122a9)
 
-![12](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/650c2e3e-8de4-4785-9411-8166039fd726)
+![12](https://github.com/dirk1983/ai_commercial/assets/5563148/650c2e3e-8de4-4785-9411-8166039fd726)
 
-![13](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/8aef66fa-38da-4077-ac47-817e5c4c1a00)
+![13](https://github.com/dirk1983/ai_commercial/assets/5563148/8aef66fa-38da-4077-ac47-817e5c4c1a00)
 
-![14](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/1371c886-67c2-4292-832c-3ea0ea51442f)
+![14](https://github.com/dirk1983/ai_commercial/assets/5563148/1371c886-67c2-4292-832c-3ea0ea51442f)
 
 
 **后台：**
 
-![1](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/36e3b4a0-b5c7-48dc-af02-5596ff044d11)
+![1](https://github.com/dirk1983/ai_commercial/assets/5563148/36e3b4a0-b5c7-48dc-af02-5596ff044d11)
 
-![2](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/456ea375-e2d7-488c-b01c-54c7169c1aca)
+![2](https://github.com/dirk1983/ai_commercial/assets/5563148/456ea375-e2d7-488c-b01c-54c7169c1aca)
 
-![3](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/e86658b0-e471-4c30-95ca-9095095a637a)
+![3](https://github.com/dirk1983/ai_commercial/assets/5563148/e86658b0-e471-4c30-95ca-9095095a637a)
 
-![4](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/63471412-422a-4a67-aeb8-e36b0306bcbf)
+![4](https://github.com/dirk1983/ai_commercial/assets/5563148/63471412-422a-4a67-aeb8-e36b0306bcbf)
 
-![5](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/255d50a3-7976-4cde-af62-9a8db2ec4acb)
+![5](https://github.com/dirk1983/ai_commercial/assets/5563148/255d50a3-7976-4cde-af62-9a8db2ec4acb)
 
-![7](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/dc62440c-e073-48a8-bb1d-8e9f36153062)
+![7](https://github.com/dirk1983/ai_commercial/assets/5563148/dc62440c-e073-48a8-bb1d-8e9f36153062)
 
-![8](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/f4b05538-a3a5-47d8-9b6b-bfd1168676ad)
+![8](https://github.com/dirk1983/ai_commercial/assets/5563148/f4b05538-a3a5-47d8-9b6b-bfd1168676ad)
 
-![9](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/36a35d8a-a4fd-416a-abe8-f06c4e384e0f)
+![9](https://github.com/dirk1983/ai_commercial/assets/5563148/36a35d8a-a4fd-416a-abe8-f06c4e384e0f)
 
-![10](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/0751b8b6-1875-4a85-a966-bbece7823ce7)
+![10](https://github.com/dirk1983/ai_commercial/assets/5563148/0751b8b6-1875-4a85-a966-bbece7823ce7)
 
-![11](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/59e1512c-1c0c-4f3d-85cd-2227aefcb73f)
+![11](https://github.com/dirk1983/ai_commercial/assets/5563148/59e1512c-1c0c-4f3d-85cd-2227aefcb73f)
 
-![12](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/18360aa9-f86a-460d-86cc-5e39fb66e38e)
+![12](https://github.com/dirk1983/ai_commercial/assets/5563148/18360aa9-f86a-460d-86cc-5e39fb66e38e)
 
-![13](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/e9bdd4a2-a94c-411d-bea8-a1b4dfb2b6cc)
+![13](https://github.com/dirk1983/ai_commercial/assets/5563148/e9bdd4a2-a94c-411d-bea8-a1b4dfb2b6cc)
 
-![14](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/666006c0-ca67-4c99-8b40-fd66fd14373b)
+![14](https://github.com/dirk1983/ai_commercial/assets/5563148/666006c0-ca67-4c99-8b40-fd66fd14373b)
 
-![15](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/39eafc0d-0d4f-4994-b86d-2723442b26a5)
+![15](https://github.com/dirk1983/ai_commercial/assets/5563148/39eafc0d-0d4f-4994-b86d-2723442b26a5)
 
-![16](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/30647b6d-33fb-43ee-be3d-3f4d3666a0a7)
+![16](https://github.com/dirk1983/ai_commercial/assets/5563148/30647b6d-33fb-43ee-be3d-3f4d3666a0a7)
 
-![17](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/d5852df0-65e4-40c7-a22b-b57b01d24786)
+![17](https://github.com/dirk1983/ai_commercial/assets/5563148/d5852df0-65e4-40c7-a22b-b57b01d24786)
 
-![18](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/f39cbbfd-d6f2-4a3b-8a98-3d78776e7c29)
+![18](https://github.com/dirk1983/ai_commercial/assets/5563148/f39cbbfd-d6f2-4a3b-8a98-3d78776e7c29)
 
 
-![b16](https://github.com/dirk1983/chatgpt_commercial/assets/5563148/bdf444da-22bd-40e9-b2f8-78ad521021c1)
+![b16](https://github.com/dirk1983/ai_commercial/assets/5563148/bdf444da-22bd-40e9-b2f8-78ad521021c1)
